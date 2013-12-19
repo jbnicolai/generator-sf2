@@ -112,6 +112,20 @@ module.exports = function (grunt) {
             }
         },
 
+        // Symfony2 commands
+        console: {
+            options: {},
+            'cache-clear-dev': {
+                command: "cache:clear"
+            },
+            'cache-clear-test': {
+                command: "cache:clear --env=test"
+            },
+            'cache-clear-prod': {
+                command: "cache:clear --env=prod --no-debug"
+            }
+        },
+
         // Empties folders to start fresh
         clean: {
             dist: {
@@ -461,6 +475,7 @@ module.exports = function (grunt) {
 
         grunt.task.run([
             'clean:server',
+            'console:cache-clear-dev',
             'concurrent:server',
             'autoprefixer',
             'php:livereload',
@@ -477,6 +492,7 @@ module.exports = function (grunt) {
         if (target !== 'watch') {
             grunt.task.run([
                 'clean:server',
+                'console:cache-clear-test',
                 'concurrent:test',
                 'autoprefixer',
             ]);
@@ -491,6 +507,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('build', [
         'clean:dist',
+        'console:cache-clear-prod',
         'useminPrepare',
         'concurrent:dist',
         'autoprefixer',

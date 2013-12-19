@@ -6,6 +6,7 @@ Yeoman generator that scaffolds out a Symfony2 web app.
 
 * Integrate [RiorGruntDistBundle](http://github.com/diegomarangoni/GruntDistBundle)
 * Integrate [KunstmaanLiveReloadBundle](https://github.com/Kunstmaan/KunstmaanLiveReloadBundle)
+* Automatically clear Symfony2 cache
 * CSS Autoprefixing
 * Built-in preview server with LiveReload
 * Automagically compile CoffeeScript & Compass
