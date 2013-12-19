@@ -27,6 +27,8 @@ For more information on what `generator-sf2` can do for you, take a look at the 
 
 Note: `grunt server` was previously used for previewing in earlier versions of the project and is being deprecated in favor of `grunt serve`.
 
+## Usage
+
 Check the documentation of [RiorGruntDistBundle](http://github.com/diegomarangoni/GruntDistBundle) for better usage understanding.
 
 ## Options
