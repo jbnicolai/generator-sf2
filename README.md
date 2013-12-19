@@ -8,10 +8,12 @@ Yeoman generator that scaffolds out a Symfony2 web app.
 * Integrate [KunstmaanLiveReloadBundle](https://github.com/Kunstmaan/KunstmaanLiveReloadBundle)
 * CSS Autoprefixing
 * Built-in preview server with LiveReload
+* Automagically compile CoffeeScript & Compass
 * Automagically lint your scripts
 * Automagically wire up your Bower components with [bower-install](https://github.com/stephenplusplus/grunt-bower-install).
 * Awesome Image Optimization (via OptiPNG, pngquant, jpegtran and gifsicle)
 * Mocha Unit Testing with PhantomJS
+* Optional - Twitter Bootstrap for SASS
 * Optional - Leaner Modernizr builds (new)
 
 For more information on what `generator-sf2` can do for you, take a look at the [Grunt tasks](https://github.com/yeoman/generator-sf2/blob/master/app/templates/_package.json) used in our `package.json`.
@@ -30,6 +32,13 @@ Note: `grunt server` was previously used for previewing in earlier versions of t
 
   Skips the automatic execution of `bower`, `npm` and `composer` after scaffolding has finished.
   
+* `--test-framework=<framework>`
+
+  Defaults to `mocha`. Can be switched for another supported testing framework like `jasmine`.
+
+* `--coffee`
+
+  Add support for [CoffeeScript](http://coffeescript.org/).
 
 ## Contribute
 

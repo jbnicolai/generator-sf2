@@ -3,6 +3,7 @@ var util = require('util');
 var path = require('path');
 var spawn = require('child_process').spawn;
 var yeoman = require('yeoman-generator');
+var chalk = require('chalk');
 
 
 var AppGenerator = module.exports = function Appgenerator(args, options, config) {
@@ -201,10 +202,18 @@ AppGenerator.prototype.install = function () {
     skipMessage: this.options['skip-install-message'],
     skipInstall: this.options['skip-install'],
     callback: function() {
-      console.log('I\'m all done. Running %ccomposer install', 'color: rgb(159,160,28)', 'for you to install the required dependencies. If this fails, try running the command yourself.');
 
-      this.spawnCommand('composer', ['update']);
-      done();
+      console.log('\n\nI\'m all done. Running ' +
+        chalk.yellow.bold('composer update') +
+        ' for you to install the required dependencies.' +
+        ' If this fails, try running the command yourself.\n\n')
+      ;
+
+      var process = this.spawnCommand('composer', ['update']);
+
+      process.on('exit', function () {
+        done();
+      }.bind(this));
     }.bind(this)
   });
 }
