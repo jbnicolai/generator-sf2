@@ -1,0 +1,17 @@
+/app/dist
+/app/bootstrap.php.cache
+/app/cache/*
+/app/config/parameters.yml
+/app/logs/*
+!app/cache/.gitkeep
+!app/logs/.gitkeep
+/bin/*
+!bin/.gitkeep
+/composer_packages
+/node_modules
+/bower_components
+/.tmp
+/.sass-cache
+/web/bundles
+/build
+/dist
