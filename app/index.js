@@ -216,9 +216,8 @@ AppGenerator.prototype.install = function () {
 
       var process = this.spawnCommand('composer', ['update']);
 
-      console.log('\n\n');
-
       process.on('exit', function () {
+        console.log('\n\n');
         done();
       }.bind(this));
     }.bind(this)
