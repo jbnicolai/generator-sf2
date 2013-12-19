@@ -96,6 +96,7 @@ AppGenerator.prototype.composer = function composer() {
 
 AppGenerator.prototype.symfony2 = function symfony2() {
   this.copy('_composer.json', 'composer.json');
+  this.copy('travis.yml', '.travis.yml');
 
   this.copy('AppCache.php', 'app/AppCache.php');
   this.copy('AppKernel.php', 'app/AppKernel.php');
@@ -112,6 +113,7 @@ AppGenerator.prototype.symfony2 = function symfony2() {
 
   this.copy('app_dev.php', 'web/app_dev.php');
   this.copy('app.php', 'web/app.php');
+  this.copy('config.php', 'web/config.php');
 
   this.copy('config/config.yml', 'app/config/config.yml');
   this.copy('config/config_dev.yml', 'app/config/config_dev.yml');
@@ -125,6 +127,8 @@ AppGenerator.prototype.symfony2 = function symfony2() {
   this.copy('error404.html.twig', 'app/Resources/TwigBundle/views/Exception/error404.html.twig');
 
   this.mkdir('src');
+
+  this.directory('acme', 'src/Acme/DemoBundle');
 };
 
 AppGenerator.prototype.jshint = function jshint() {

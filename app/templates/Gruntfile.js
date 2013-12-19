@@ -352,6 +352,7 @@ module.exports = function (grunt) {
                         dest: '.tmp/',
                         src: [
                             'app_dev.php',
+                            'config.php',
                             '*.{ico,png,txt}',
                             'styles/fonts/{,*/}*.*'
                         ]
@@ -443,6 +444,7 @@ module.exports = function (grunt) {
                 'coffee',<% } %>
                 'compass',
                 'copy:bower-components',
+                'copy:js',
                 'copy:styles',
                 'imagemin',
                 'svgmin',
