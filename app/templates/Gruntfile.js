@@ -337,9 +337,7 @@ module.exports = function (grunt) {
                     src: [
                         'app.php',
                         '*.{ico,png,txt}',
-                        '.htaccess',
                         'images/{,*/}*.webp',
-                        '{,*/}*.html',
                         'styles/fonts/{,*/}*.*'<% if (compassBootstrap) { %>,
                         'bower_components/sass-bootstrap/fonts/*.*'<% } %>
                     ]
@@ -381,9 +379,9 @@ module.exports = function (grunt) {
                 dot: true,
                 cwd: 'bower_components',
                 dest: '.tmp/bower_components/',
-                src: '{,*/}*.*'
+                src: '**/*.*'
             },
-            scripts: {
+            js: {
                 expand: true,
                 dot: true,
                 cwd: '<%%= yeoman.app %>/scripts',
@@ -428,7 +426,7 @@ module.exports = function (grunt) {
                 'copy:bower-components',
                 'copy:test',
                 'copy:dev',
-                'copy:scripts',
+                'copy:js',
                 'copy:images',
                 'copy:styles'
             ],
@@ -437,7 +435,7 @@ module.exports = function (grunt) {
                 'copy:bower-components',
                 'copy:test',
                 'copy:dev',
-                'copy:scripts',
+                'copy:js',
                 'copy:images',
                 'copy:styles'
             ],
@@ -447,7 +445,8 @@ module.exports = function (grunt) {
                 'copy:bower-components',
                 'copy:styles',
                 'imagemin',
-                'svgmin'
+                'svgmin',
+                'htmlmin'
             ]
         }
     });

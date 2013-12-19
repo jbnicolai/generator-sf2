@@ -150,14 +150,15 @@ AppGenerator.prototype.writeIndex = function writeIndex() {
 
   this.indexFile = this.readFileAsString(path.join(this.sourceRoot(), 'base.html.twig'));
   this.indexFile = this.engine(this.indexFile, this);
-  this.indexFile = this.appendScripts(this.indexFile, 'scripts/main.js', [
+  this.indexFile = this.appendFiles(this.indexFile, 'js', 'scripts/main.js', [
     'scripts/main.js'
-  ]);
+  ], null, '.tmp');
 
   if (this.compassBootstrap) {
     // wire Twitter Bootstrap plugins
     bs = 'bower_components/sass-bootstrap/js/';
-    this.indexFile = this.appendScripts(this.indexFile, 'scripts/plugins.js', [
+
+    this.indexFile = this.appendFiles(this.indexFile, 'js', 'scripts/plugins.js', [
       bs + 'affix.js',
       bs + 'alert.js',
       bs + 'dropdown.js',
@@ -170,7 +171,7 @@ AppGenerator.prototype.writeIndex = function writeIndex() {
       bs + 'scrollspy.js',
       bs + 'collapse.js',
       bs + 'tab.js'
-    ]);
+    ], null, '.tmp');
   }
 };
 
