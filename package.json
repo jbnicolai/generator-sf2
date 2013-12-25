@@ -1,6 +1,6 @@
 {
   "name": "generator-sf2",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Scaffold out a Symfony2 web app",
   "keywords": [
     "yeoman-generator",
@@ -15,10 +15,6 @@
   ],
   "homepage": "https://github.com/diegomarangoni/generator-sf2",
   "bugs": "https://github.com/diegomarangoni/generator-sf2/issues",
-  "author": {
-    "name": "Diego Marangoni",
-    "url": "https://github.com/diegomarangoni"
-  },
   "author": "Diego Marangoni",
   "main": "app/index.js",
   "repository": {
