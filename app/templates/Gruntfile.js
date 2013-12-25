@@ -475,9 +475,9 @@ module.exports = function (grunt) {
 
         grunt.task.run([
             'clean:server',
-            'console:cache-clear-dev',
             'concurrent:server',
             'autoprefixer',
+            'console:cache-clear-dev',
             'php:livereload',
             'watch'
         ]);
@@ -492,9 +492,9 @@ module.exports = function (grunt) {
         if (target !== 'watch') {
             grunt.task.run([
                 'clean:server',
-                'console:cache-clear-test',
                 'concurrent:test',
                 'autoprefixer',
+                'console:cache-clear-test',
             ]);
         }
 
@@ -507,7 +507,6 @@ module.exports = function (grunt) {
 
     grunt.registerTask('build', [
         'clean:dist',
-        'console:cache-clear-prod',
         'useminPrepare',
         'concurrent:dist',
         'autoprefixer',
@@ -517,7 +516,8 @@ module.exports = function (grunt) {
         'copy:dist',<% if (includeModernizr) { %>
         'modernizr',<% } %>
         'rev',
-        'usemin'
+        'usemin',
+        'console:cache-clear-prod'
     ]);
 
     grunt.registerTask('default', [
