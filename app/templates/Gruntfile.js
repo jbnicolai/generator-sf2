@@ -116,13 +116,13 @@ module.exports = function (grunt) {
         console: {
             options: {},
             'cache-clear-dev': {
-                command: "cache:clear"
+                command: 'cache:clear'
             },
             'cache-clear-test': {
-                command: "cache:clear --env=test"
+                command: 'cache:clear --env=test'
             },
             'cache-clear-prod': {
-                command: "cache:clear --env=prod --no-debug"
+                command: 'cache:clear --env=prod --no-debug'
             }
         },
 
