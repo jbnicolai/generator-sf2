@@ -22,7 +22,7 @@
         "rior/grunt-dist-bundle": "1.0.*@dev"
     },
     "require-dev": {
-        "kunstmaan/live-reload-bundle": "2.4.*@dev"
+        "kunstmaan/live-reload-bundle": "3.0.*@dev"
     },
     "scripts": {
         "post-install-cmd": [
