@@ -27,7 +27,7 @@
   "dependencies": {
     "yeoman-generator": "~0.14.0",
     "cheerio": "~0.12.1",
-    "chalk": "~0.3.0"
+    "chalk": "~1.0.0"
   },
   "peerDependencies": {
     "yo": ">=1.0.0-rc.1.1",
